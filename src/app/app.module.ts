@@ -9,10 +9,12 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
 import { TableComponent } from './content/table/table.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
+import { ErrorStatusMatricsComponent } from './content/error-status-matrics/error-status-matrics.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ErrorStatusMatricsComponent
   ],
   imports: [
     BrowserModule,

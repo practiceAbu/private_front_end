@@ -14,4 +14,8 @@ export class ApiService {
    getAllRequests = (username: string | undefined): Observable<RebuttalData[]> => {
     return this.http.get<RebuttalData[]>(`${this._baseurl}/All`);
   };
+
+   getCountByStatus = (username: string | undefined): Observable<{ [key: string]: number }> => {
+    return this.http.get<{ [key: string]: number }>(`${this._baseurl}/dashboard/count-by-status`);
+  }
 }
