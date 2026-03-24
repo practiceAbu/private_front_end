@@ -1,0 +1,39 @@
+<mat-toolbar>
+<!-- navbar.component.html -->
+<nav class="navbar">
+
+  <div class="right-section">
+  <!-- Logo -->
+  <div class="logo">
+   <img src="/assets/Images/logo.png" alt="Logo" class="logo" srcset="">
+  </div>
+
+  <!-- Menu -->
+  <div class="menu">
+    <a *ngFor="let item of menuItems"
+       [routerLink]="item.route"
+       (click)="setActive(item)"
+       [class.active]="item.active">
+      {{ item.label }}
+    </a>
+  </div>
+  
+  </div>
+
+
+  <div class="left"> 
+ <!-- Help -->
+    <div class="icon-btn">?</div>
+
+    <!-- Feedback -->
+    <button class="feedback-btn">Feed Back</button>
+
+    <!-- Profile -->
+    <div class="profile">
+      <img src="/assets/Images/user.png" alt="user" />
+    </div>
+
+  </div>
+
+</nav>
+</mat-toolbar>
